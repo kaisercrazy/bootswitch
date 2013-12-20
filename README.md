@@ -1,5 +1,5 @@
 ## Bootswitch.
-This plugin created for Bootstrap Button Groups. It's only 2kb! (1kb when minified :] ) You can create switchable buttons with hidden inputs. Fully customizeable with options:
+This plugin created for Bootstrap Button Groups. It's only 1kb! You can create switchable buttons with hidden inputs. Fully customizeable with options:
 
 ### Usage
 You need jQuery, Bootstrap, and plugin js file.
@@ -57,3 +57,5 @@ You can customize plugin with this options. The options;
  	});
  </script>
 ```
+###DEMO
+For Demo [Click here](http://wpadami.com/jquery/bootswitch)
