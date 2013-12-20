@@ -58,4 +58,4 @@ You can customize plugin with this options. The options;
  </script>
 ```
 ###DEMO
-For Demo [Click here](http://wpadami.com/jquery/bootswitch)
+For Demo [Click here](http://kaisercrazy.github.io/bootswitch/)
