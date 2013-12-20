@@ -1,55 +1,58 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Bootswitch : Bootswitch is a plugin for bootstrap button groups" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Bootswitch</title>
+    <meta charset="utf-8">
+    <title>Bootswitch for Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="jumbotron-narrow.css">
+    <link rel="stylesheet" href="prism.css">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
   </head>
-
   <body>
+  <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#usage">Usage</a></li>
+          <li><a href="#demo">Demo</a></li>
+        </ul>
+        <h3 class="text-muted"><i class="fa fa-code fa-lg"></i>Bootswitch</h3>
+      </div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/kaisercrazy/bootswitch">View on GitHub</a>
+      <div class="jumbotron">
+        <h2>Bootswitch for Bootstrap</h2>
+        <p class="lead">This plugin created for Bootstrap Button Groups. It's only 2kb! (1kb when minified :] ) You can create switchable buttons with hidden inputs. Fully customizeable with options:</p>
+      </div>
+      <div class="row marketing">
+          <div class="col-lg-4"><a class="btn btn-labeled btn-lg btn-primary" href="https://github.com/kaisercrazy/bootswitch" role="button" target="_blank"><span class="btn-label"><i class="fa fa-github fa-lg"></i></span><strong>View on Github</strong></a></div>
+          <div class="col-lg-4"><a class="btn btn-labeled btn-lg btn-success" href="https://github.com/kaisercrazy/bootswitch/tarball/master" role="button"><span class="btn-label"><i class="fa fa-download fa-lg"></i></span><strong>Download (.tar)</strong></a></div>
+           <div class="col-lg-4"><a class="btn btn-labeled btn-lg btn-info" href="https://github.com/kaisercrazy/bootswitch/zipball/master" role="button"><span class="btn-label"><i class="fa fa-download fa-lg"></i></span><strong>Download (.zip)</strong></a></div>
+       </div>
 
-          <h1 id="project_title">Bootswitch</h1>
-          <h2 id="project_tagline">Bootswitch is a plugin for bootstrap button groups</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/kaisercrazy/bootswitch/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/kaisercrazy/bootswitch/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
-<a name="bootswitch" class="anchor" href="#bootswitch"><span class="octicon octicon-link"></span></a>Bootswitch.</h2>
-
-<p>This plugin created for Bootstrap Button Groups. It's only 2kb! (1kb when minified :]) You can create switchable buttons with hidden inputs. Fully customizeable with options:</p>
-
-<h3>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
-
+      <div class="row marketing">
+        <section id="usage">
+            <h3>Usage</h3>
 <p>You need jQuery, Bootstrap, and plugin js file.</p>
 
+<section class="language-markup">
 <pre><code>&lt;link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"&gt;
 &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"&gt;&lt;/script&gt;
 &lt;script src="yoursitepath/bootswitch.min.js"&gt;&lt;/script&gt;
 </code></pre>
+</section>
 
 <p>After that you can simply insert this code</p>
 
-<pre><code> &lt;script&gt;
+<pre class="language-javascript"><code> &lt;script&gt;
     jQuery(document).ready(function($) {
         $('.btn-group').bootswitch();   
     });
@@ -57,7 +60,7 @@
 </code></pre>
 
 <p>Your bootstrap button group should be;</p>
-
+<section class="language-markup">
 <pre><code>&lt;div class="btn-group ne" data-target="#showm" data-toggle="buttons-radio"&gt;
     &lt;button type="button" class="btn btn-info yes" data-toggle="button"&gt;Yes&lt;/button&gt;
     &lt;button type="button" class="btn btn-info no" data-toggle="button"&gt;No&lt;/button&gt;
@@ -65,13 +68,13 @@
 
 &lt;input type="hidden" id="showm" class="form-control" /&gt;
 </code></pre>
+</section>
 
-<h3>
-<a name="plugin-options--default-values" class="anchor" href="#plugin-options--default-values"><span class="octicon octicon-link"></span></a>Plugin Options &amp; Default Values</h3>
+<h3>Plugin Options &amp; Default Values</h3>
 
 <p>You can customize plugin with this options. The options;</p>
 
-<pre><code>{
+<pre class="language-javascript"><code>{
     object: this, //the value 'class' of button group. generally '.btn-group'
     positive: '.yes', //positive div (button) (should be class or id)
     negative: '.no', //negative div (button) (should be class or id)
@@ -81,10 +84,9 @@
 }
 </code></pre>
 
-<h3>
-<a name="plugin-usage-with-options" class="anchor" href="#plugin-usage-with-options"><span class="octicon octicon-link"></span></a>Plugin Usage With Options</h3>
+<h3>Plugin Usage With Options</h3>
 
-<pre><code> &lt;script&gt;
+<pre class="language-javascript"><code> &lt;script&gt;
     jQuery(document).ready(function($) {
         $('.btn-group').bootswitch({
             positive: '.yes',
@@ -96,33 +98,44 @@
     });
  &lt;/script&gt;
 </code></pre>
+        </section>
+        <section id="demo">
+        <h3>Demo</h3>
+        <div class="col-lg-6">
+          <h4>Bootstrap Demo</h4>
+    <div class="btn-group ne" data-target="#showm" data-toggle="buttons-radio">
+          <button type="button" value="yes" class="btn btn-info yes" data-toggle="button">Yes</button>
+          <button type="button" value="no" class="btn btn-info no" data-toggle="button">No</button>
+      </div><div class="clear"> </div>
+      <input type="text" id="showm" class="form-control" value="no" />
+        </div>
 
-<h3>
-<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>DEMO</h3>
-
-<p>For Demo <a href="http://wpadami.com/jquery/bootswitch">Click here</a></p>
+        <div class="col-lg-6">
+          <h4>Javascript</h4>
+          <pre><code class="language-javascript">jQuery(document).ready(function($) {
+  $('.btn-group').bootswitch(); 
+});</code></pre>
+        </div>
       </section>
-    </div>
+      </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Bootswitch maintained by <a href="https://github.com/kaisercrazy">kaisercrazy</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+      <div class="footer">
+        <p>Bootswitch maintained by <a href="https://github.com/kaisercrazy">kaisercrazy</a></p>
+      </div>
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-44038282-2");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    </div> <!-- /container -->
 
 
+  <!-- Javascript Files -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+   <script src="bootswitch.min.js"></script>
+   <script src="prism.js"></script>
+   <script>
+    jQuery(document).ready(function($) {
+      $('.btn-group').bootswitch();  
+    });
+   </script>
+   <a href="https://github.com/kaisercrazy/bootswitch"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
   </body>
 </html>
