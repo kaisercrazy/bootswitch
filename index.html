@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswitch for Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="jumbotron-narrow.css">
+    <link rel="stylesheet" href="prism.css">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="http://kaisercrazy.github.io/bootswitch/">Home</a></li>
+          <li><a href="#usage">Usage</a></li>
+          <li><a href="#demo">Demo</a></li>
+        </ul>
+        <h3 class="text-muted"><i class="fa fa-code fa-lg"></i>Bootswitch</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2>Bootswitch for Bootstrap</h2>
+        <p class="lead">This plugin created for Bootstrap Button Groups. It's only 2kb! (1kb when minified :] ) You can create switchable buttons with hidden inputs. Fully customizeable with options:</p>
+      </div>
+      <div class="row marketing">
+          <div class="col-lg-4"><a class="btn btn-labeled btn-lg btn-primary" href="https://github.com/kaisercrazy/bootswitch" role="button" target="_blank"><span class="btn-label"><i class="fa fa-github fa-lg"></i></span><strong>View on Github</strong></a></div>
+          <div class="col-lg-4"><a class="btn btn-labeled btn-lg btn-success" href="https://github.com/kaisercrazy/bootswitch/tarball/master" role="button"><span class="btn-label"><i class="fa fa-download fa-lg"></i></span><strong>Download (.tar)</strong></a></div>
+           <div class="col-lg-4"><a class="btn btn-labeled btn-lg btn-info" href="https://github.com/kaisercrazy/bootswitch/zipball/master" role="button"><span class="btn-label"><i class="fa fa-download fa-lg"></i></span><strong>Download (.zip)</strong></a></div>
+       </div>
+
+      <div class="row marketing">
+        <section id="usage">
+            <h3>Usage</h3>
+<p>You need jQuery, Bootstrap, and plugin js file.</p>
+
+<section class="language-markup">
+<pre><code>&lt;link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"&gt;
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="yoursitepath/bootswitch.min.js"&gt;&lt;/script&gt;
+</code></pre>
+</section>
+
+<p>After that you can simply insert this code</p>
+
+<pre class="language-javascript"><code> &lt;script&gt;
+    jQuery(document).ready(function($) {
+        $('.btn-group').bootswitch();   
+    });
+ &lt;/script&gt;
+</code></pre>
+
+<p>Your bootstrap button group should be;</p>
+<section class="language-markup">
+<pre><code>&lt;div class="btn-group" data-toggle="buttons-radio"&gt;
+    &lt;button type="button" class="btn btn-info yes" data-toggle="button"&gt;Yes&lt;/button&gt;
+    &lt;button type="button" class="btn btn-info no" data-toggle="button"&gt;No&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;input type="hidden" id="showm" class="form-control" /&gt;
+</code></pre>
+</section>
+
+<h3>Plugin Options &amp; Default Values</h3>
+
+<p>You can customize plugin with this options. The options;</p>
+
+<pre class="language-javascript"><code>{
+    object: this, //the value 'class' of button group. generally '.btn-group'
+    positive: '.yes', //positive div (button) (should be class or id)
+    negative: '.no', //negative div (button) (should be class or id)
+    posval: 'yes', //positive button value (should be string or integer)
+    negval: 'no', //negative button value (should be string or integer)
+    input: '#showm' //target input id
+}
+</code></pre>
+
+<h3>Plugin Usage With Options</h3>
+
+<pre class="language-javascript"><code> &lt;script&gt;
+    jQuery(document).ready(function($) {
+        $('.btn-group').bootswitch({
+            positive: '.yes',
+            negative: '.no',
+            posval: 'yes',
+            negval: 'no',
+            input: '#showm'
+        }); 
+    });
+ &lt;/script&gt;
+</code></pre>
+        </section>
+        <section id="demo">
+        <h3>Demo</h3>
+        <div class="col-lg-6">
+          <h4>Bootstrap Demo</h4>
+    <div class="btn-group" data-toggle="buttons-radio">
+          <button type="button" value="yes" class="btn btn-info yes" data-toggle="button">Yes</button>
+          <button type="button" value="no" class="btn btn-info no" data-toggle="button">No</button>
+      </div><div class="clear"> </div>
+      <input type="text" id="showm" class="form-control" value="no" />
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Javascript</h4>
+          <pre><code class="language-javascript">jQuery(document).ready(function($) {
+  $('.btn-group').bootswitch(); 
+});</code></pre>
+        </div>
+      </section>
+      </div>
+
+      <div class="footer">
+        <p>Bootswitch maintained by <a href="https://github.com/kaisercrazy">kaisercrazy</a> aka <a href="http:/wpadami.com" target="_blank">Serkan Algur</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+  <!-- Javascript Files -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+   <script src="bootswitch.min.js"></script>
+   <script src="prism.js"></script>
+   <script>
+    jQuery(document).ready(function($) {
+      $('.btn-group').bootswitch();  
+    });
+   </script>
+   <a href="https://github.com/kaisercrazy/bootswitch"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44038282-2', 'kaisercrazy.github.io');
+  ga('send', 'pageview');
+
+</script>
+<!-- AddThis Smart Layers BEGIN -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b4cce220ef72f4"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+  </body>
+</html>

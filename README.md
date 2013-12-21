@@ -21,7 +21,7 @@ After that you can simply insert this code
 ```
 Your bootstrap button group should be;
 ```
-<div class="btn-group ne" data-target="#showm" data-toggle="buttons-radio">
+<div class="btn-group" data-toggle="buttons-radio">
 	<button type="button" class="btn btn-info yes" data-toggle="button">Yes</button>
 	<button type="button" class="btn btn-info no" data-toggle="button">No</button>
 </div>
